@@ -1,0 +1,23 @@
+{
+  "name": "raffles",
+  "version": "1.0.0",
+  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/285784bf-b378-4b8b-8fc3-61968454951a/deploy-status)](https://app.netlify.com/sites/sorteossarg/deploys)\r echo \"# Raffles\" >> README.md\r git init\r git add README.md\r git commit -m \"first commit\"\r git branch -M main\r git remote add origin https://github.com/ManuelHidalgo26/Raffles.git\r git push -u origin main",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.1",
+    "morgan": "^1.10.0",
+    "nodemailer": "^7.0.2"
+  }
+}
