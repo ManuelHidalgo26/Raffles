@@ -1,0 +1,42 @@
+/*
+  Estilos específicos para la página de Contacto.
+  Ubicado en /Raffles/scss/contacto.scss
+  Este archivo será compilado a /Raffles/css/contacto.css
+*/
+@charset "UTF-8"; /* Esta línea la añade Sass a veces */
+
+/* Estilos para la sección principal de contacto */
+.contact-section {
+  margin-bottom: 3rem; /* Asumiendo que main-content tiene padding, añadimos margen abajo a la sección */
+  padding: 2rem 0; /* Padding interno si lo necesitas, o ajusta margin-top/bottom */
+}
+
+/* Contenedor para formulario y detalles */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Estilos para el contenedor del formulario */
+.contact-form-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Estilos para el contenedor de detalles */
+.contact-details {
+  flex: 1;
+  min-width: 250px;
+  background-color: var(--secondary-color);
+  padding: var(--spacing-unit);
+  border-radius: var(--border-radius);
+}
+
+/*
+  Los estilos del formulario (como .contact-form, input, button) NO aparecerán aquí
+  si los mantienes COMENTADOS en tu archivo scss/contacto.scss.
+*/
+
+/*# sourceMappingURL=contacto.css.map */ /* Esta línea y el archivo .map los añade Sass */

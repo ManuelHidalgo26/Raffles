@@ -1,5 +1,4 @@
 # Archivos compilados desde SCSS (no se deben versionar)
-*.css
 *.css.map
 
 # Dependencias y entornos

@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/* Estilos base */
+:root {
+  --primary-color: #F39C12;
+  --secondary-color: #FDF9F3;
+  --text-color: #333;
+}
+
+.main-title {
+  font-size: 3rem; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Negrita para destacar */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  margin-bottom: 1rem; /* Espacio debajo del título */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header y navegación */
+.header {
+  background-color: var(--primary-color);
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin-left: 1.5rem;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Media Queries */
+/* Celulares */
+@media (max-width: 767px) {
+  .menu-button {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    z-index: 1;
+  }
+  .nav-menu.show {
+    display: flex;
+  }
+  .nav-menu li {
+    margin: 0.5rem 0;
+  }
+  .level-box {
+    width: 100%;
+  }
+}
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .level-box {
+    width: calc(50% - 1rem);
+  }
+}
+/* Escritorio */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+/* Televisores y pantallas grandes */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+  .level-box {
+    padding: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .main-title {
+    font-size: 2rem; /* Reduce el tamaño en móviles */
+  }
+}
+
+/*# sourceMappingURL=sobrenosotros.css.map */

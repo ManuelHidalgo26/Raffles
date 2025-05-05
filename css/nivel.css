@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/*
+  Estilos específicos para la página de detalle de Nivel (donde ocurre el sorteo).
+  Ubicado en /Raffles/scss/nivel.scss
+  Este archivo será compilado a /Raffles/css/nivel.css
+*/
+.sorteo-box {
+  border: 2px dashed var(--primary-color);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: var(--spacing-unit);
+  text-align: center;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sorteo-box span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.sorteo-box span:last-child {
+  margin-bottom: 0;
+}
+
+/* Estilos para el botón de iniciar sorteo */
+.btn-sortear {
+  display: block;
+  width: 200px;
+  margin: 0 auto 2rem auto;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-sortear:hover {
+  background-color: #d48a0e; /* Este color #d48a0e es el resultado de darken(#F39C12, 10%) si usaras la función Sass, o el color directo que definiste */
+}
+
+/* Media Queries específicas para esta página (si las necesitas, quizás para ajustar el ancho del botón) */
+@media (max-width: 767px) {
+  .btn-sortear {
+    width: 80%;
+    padding: 1rem;
+  }
+}
+ /* Esta línea y el archivo .map los añade Sass */
+
+/*# sourceMappingURL=nivel.css.map */

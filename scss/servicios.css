@@ -1,0 +1,22 @@
+/*
+  Estilos específicos para la página de Servicios.
+  Ubicado en /Raffles/scss/servicios.scss
+  Este archivo será compilado a /Raffles/css/servicios.css
+*/
+@charset "UTF-8"; /* Esta línea la añade Sass a veces */
+
+/* Contenido principal de la página de servicios */
+.main-content {
+  padding: 2rem 0;
+}
+
+/*
+  IMPORTANTE:
+  Los estilos para .levels-container, .level-box, .btn-suscribe
+  NO deben aparecer en este archivo (servicios.css)
+  si eliminaste correctamente la duplicación en servicios.scss.
+*/
+
+/* Añade aquí otros estilos que SÓLO sean para la página de Servicios en el futuro */
+
+/*# sourceMappingURL=servicios.css.map */ /* Esta línea y el archivo .map los añade Sass */

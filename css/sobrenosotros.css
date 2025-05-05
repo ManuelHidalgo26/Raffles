@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/*
+Estilos específicos para la página "Sobre Nosotros".
+Ubicado en /Raffles/scss/sobrenosotros.scss
+Este archivo será compilado a /Raffles/css/sobrenosotros.css
+*/
+/* Estilos para las secciones principales de "Sobre Nosotros" */
+.about-section {
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #eee;
+}
+.about-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.about-section h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.about-section p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Estilos específicos para la sección de Equipo */
+.about-section.team .team-members-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.about-section.team .team-member {
+  flex: 0 0 280px;
+  text-align: center;
+  background-color: var(--secondary-color);
+  padding: var(--spacing-unit);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.about-section.team .team-member img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: var(--spacing-unit);
+  border: 3px solid var(--primary-color);
+}
+.about-section.team .team-member h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+.about-section.team .team-member p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos específicos para la sección de Compromiso (opcional, podrías añadir íconos, etc.) */
+.about-section.commitment {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Media Queries para el equipo (para que se apilen en pantallas pequeñas) */
+@media (max-width: 767px) {
+  .about-section.team .team-members-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-section.team .team-member {
+    flex-basis: 90%;
+    max-width: 300px;
+  }
+}
+/* Media Queries para tabletas (si necesitas ajustar el diseño del equipo) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about-section.team .team-members-container {
+    gap: 1rem;
+    justify-content: space-around;
+  }
+  .about-section.team .team-member {
+    flex-basis: calc(50% - 1rem);
+    max-width: none;
+  }
+}
+
+/*# sourceMappingURL=sobrenosotros.css.map */

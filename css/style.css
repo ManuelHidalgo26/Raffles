@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/*
+Estilos globales para el proyecto Raffles.
+Ubicado en /Raffles/scss/style.scss
+Este archivo será compilado a /Raffles/css/style.css
+*/
+:root {
+  --primary-color: #F39C12;
+  --secondary-color: #FDF9F3;
+  --text-color: #333;
+  --light-text-color: #fff;
+  --border-radius: 8px;
+  --spacing-unit: 1rem;
+}
+
+/* Reset básico y estilos del body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Contenedor principal para centrar contenido */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+}
+
+/* Estilos del Header */
+.header {
+  background-color: var(--primary-color);
+  padding: var(--spacing-unit) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--light-text-color);
+}
+
+/* Estilos del título principal */
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: var(--spacing-unit);
+  text-align: center;
+  width: 100%;
+}
+
+/* Estilos de la navegación */
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin-left: 1.5rem;
+}
+
+.nav-menu li:first-child {
+  margin-left: 0;
+}
+
+.nav-menu a {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem var(--spacing-unit);
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--text-color);
+  /* Si quisieras usar darken() aquí con una variable de Sass:
+  color: darken($light-text-color-sass, 20%);
+  */
+}
+
+/* Botón del menú hamburguesa */
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.menu-button span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--light-text-color);
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu-button span:last-child {
+  margin-bottom: 0;
+}
+
+/* Estilos del Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  text-align: center;
+  padding: var(--spacing-unit) 0;
+  margin-top: 2rem;
+}
+
+/* Media Queries - Adaptación para dispositivos móviles */
+/* Celulares (hasta 767px) */
+@media (max-width: 767px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-button {
+    display: block;
+    align-self: flex-end;
+    margin-right: var(--spacing-unit);
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: var(--spacing-unit);
+    z-index: 5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .nav-menu.show {
+    display: flex;
+  }
+  .nav-menu li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  .nav-menu li a {
+    padding: 0.8rem var(--spacing-unit);
+  }
+}
+/* Tabletas (768px a 1023px) */
+/* Escritorio (1024px en adelante) */
+.levels-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.level-box {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  width: calc(33.333% - 1rem);
+}
+
+.btn-suscribe {
+  background-color: white;
+  color: var(--primary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+/*# sourceMappingURL=style.css.map */
