@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/285784bf-b378-4b8b-8fc3-61968454951a/deploy-status)](https://app.netlify.com/sites/sorteossarg/deploys)

@@ -1,0 +1,30 @@
+/*
+  Estilos específicos para la página de Inicio (index.html).
+  Ubicado en /Raffles/scss/home.scss
+  Este archivo será compilado a /Raffles/css/home.css
+*/
+
+/*
+  Aquí añadirás las reglas SCSS/CSS para el contenido que SÓLO aparece
+  en la página de inicio y que no forma parte de componentes globales o compartidos.
+
+  Por ejemplo:
+  - Estilos para un hero section (banner principal) único de la home.
+  - Estilos para secciones de "cómo funciona" o "testimonios" si solo están en la home.
+*/
+
+// Puedes añadir variables de Sass ($) o variables de CSS (--) específicas para la home aquí.
+
+/* Ejemplo (descomenta y modifica cuando añadas contenido único a la home): */
+
+.hero-section {
+    background-image: url('../images/hero-bg.jpg'); // Ejemplo de ruta a imagen
+    background-size: cover;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+
+// Nota: Los estilos para .levels-container, .level-box, .btn-suscribe
+// NO van aquí, ya que se usan también en servicios.html.
+// Los mantendremos en style.scss según lo vimos en tu upload.

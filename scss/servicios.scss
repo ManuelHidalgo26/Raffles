@@ -1,0 +1,26 @@
+/*
+  Estilos específicos para la página de Servicios.
+  Ubicado en /Raffles/scss/servicios.scss
+  Este archivo será compilado a /Raffles/css/servicios.css
+*/
+
+// No se necesitan variables de Sass o CSS específicas aquí por ahora,
+// a menos que añadas contenido único a esta página que las requiera.
+
+/* Contenido principal de la página de servicios */
+.main-content {
+    padding: 2rem 0; // Añadimos un padding superior/inferior al contenido principal
+    // Este padding lo tenías en el CSS original de servicios y es específico de la página.
+}
+
+/*
+  IMPORTANTE:
+  Los estilos para .levels-container, .level-box, .btn-suscribe
+  NO van en este archivo (servicios.scss) porque están duplicados
+  y deben estar únicamente en style.scss ya que se usan en index.html también.
+*/
+
+/* Añade aquí otros estilos que SÓLO sean para la página de Servicios en el futuro */
+
+// Las media queries específicas para .levels-container y .level-box
+// tampoco van aquí, deben estar en style.scss junto con las reglas base de esos elementos.

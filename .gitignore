@@ -1,0 +1,12 @@
+# Archivos compilados desde SCSS (no se deben versionar)
+*.css
+*.css.map
+
+# Dependencias y entornos
+node_modules/
+dist/
+build/
+
+# Archivos del sistema y editores
+.DS_Store
+*.log

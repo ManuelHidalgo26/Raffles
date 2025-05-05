@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Raffles</title> 
+    <link rel="stylesheet" href="../scss/style.css">
+    <link rel="stylesheet" href="../scss/contacto.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="main-title">¡Bienvenidos a Raffles!</h1>
+
+                <nav class="nav">
+                    <button id="menu-toggle" class="menu-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul id="nav-menu" class="nav-menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../servicios/servicios.html">Servicios</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                        <li><a href="../sobrenosotros/sobrenosotros.html">Sobre Nosotros</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <p>¿Tienes alguna pregunta? Contáctanos directamente.</p> 
+    </header>
+    <main class="container main-content"> 
+        <section class="contact-section">
+            <h2>Ponte en Contacto</h2>
+            <div class="contact-container"> 
+                <div class="contact-form-container">
+                    <h3>Envíanos un Mensaje</h3>
+                    {/* El atributo action y method serán manejados por el backend */}
+                    <form action="" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto:</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <h3>Nuestra Información</h3>
+                    <p>Si prefieres, puedes contactarnos por estos medios:</p>
+                    <p><strong>Email:</strong> info@raffles.com</p> {/* Reemplaza con tu email real */}
+                    <p><strong>Teléfono:</strong> +54 3513421977</p> {/* Reemplaza con tu teléfono real */}
+                    <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad, País</p> {/* Reemplaza con tu dirección real */}
+                    <div class="contact-map">
+                        <iframe src="URL_DE_TU_MAPA_EMBEBIDO" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div> 
+                </div>
+            </div> 
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Sorteos Transparentes. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>

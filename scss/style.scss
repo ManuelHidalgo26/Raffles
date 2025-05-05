@@ -1,0 +1,222 @@
+/*
+Estilos globales para el proyecto Raffles.
+Ubicado en /Raffles/scss/style.scss
+Este archivo será compilado a /Raffles/css/style.css
+*/
+
+// 1. Variables de Sass (para usar en operaciones de Sass)
+$primary-color-sass: #F39C12;
+$secondary-color-sass: #FDF9F3;
+$text-color-sass: #333;
+$light-text-color-sass: #fff;
+$border-radius-sass: 8px;
+$spacing-unit-sass: 1rem;
+
+// 2. Variables de CSS (para usar en reglas CSS y potencialmente modificarlas en tiempo de ejecución)
+:root {
+    --primary-color: #{$primary-color-sass}; // Interpolamos la variable Sass
+    --secondary-color: #{$secondary-color-sass}; // para definir la variable CSS
+    --text-color: #{$text-color-sass};
+    --light-text-color: #{$light-text-color-sass};
+    --border-radius: #{$border-radius-sass};
+    --spacing-unit: #{$spacing-unit-sass};
+}
+
+/* Reset básico y estilos del body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color); // Usamos la variable CSS
+    color: var(--text-color); // Usamos la variable CSS
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Contenedor principal para centrar contenido */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit); // Usamos la variable CSS
+}
+
+/* Estilos del Header */
+.header {
+    background-color: var(--primary-color); // Usamos la variable CSS
+    padding: var(--spacing-unit) 0; // Usamos la variable CSS
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--light-text-color); // Usamos la variable CSS
+}
+
+/* Estilos del título principal */
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: var(--spacing-unit); // Usamos la variable CSS
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilos de la navegación */
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 1.5rem;
+}
+
+.nav-menu li:first-child {
+    margin-left: 0;
+}
+
+.nav-menu a {
+    color: var(--light-text-color); // Usamos la variable CSS
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem var(--spacing-unit); // Usamos la variable CSS
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--text-color); // Usamos la variable CSS
+    /* Si quisieras usar darken() aquí con una variable de Sass:
+    color: darken($light-text-color-sass, 20%);
+    */
+}
+
+
+/* Botón del menú hamburguesa */
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.menu-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--light-text-color); // Usamos la variable CSS
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-button span:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilos del Footer */
+.footer {
+    background-color: var(--primary-color); // Usamos la variable CSS
+    color: var(--light-text-color); // Usamos la variable CSS
+    text-align: center;
+    padding: var(--spacing-unit) 0; // Usamos la variable CSS
+    margin-top: 2rem;
+}
+
+
+/* Media Queries - Adaptación para dispositivos móviles */
+
+/* Celulares (hasta 767px) */
+@media (max-width: 767px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-button {
+        display: block;
+        align-self: flex-end;
+        margin-right: var(--spacing-unit); // Usamos la variable CSS
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color); // Usamos la variable CSS
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: var(--spacing-unit); // Usamos la variable CSS
+        z-index: 5;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+         padding: 0.8rem var(--spacing-unit); // Usamos la variable CSS
+    }
+}
+
+/* Tabletas (768px a 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+     // Estilos específicos para tabletas si los necesitas
+}
+
+/* Escritorio (1024px en adelante) */
+// Estilos específicos para escritorio si los necesitas
+
+
+// Aquí es donde irían los estilos que ANTES estaban en css/style.css pero
+// eran específicos de la página de inicio (index.html).
+// Si no hay estilos específicos para la página de inicio en el style.css anterior,
+// entonces no necesitas añadir nada aquí, esos estilos irán en scss/home.scss.
+.levels-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.level-box {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: calc(33.333% - 1rem);
+}
+
+.btn-suscribe {
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}

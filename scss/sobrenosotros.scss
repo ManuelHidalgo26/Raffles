@@ -1,0 +1,112 @@
+/*
+Estilos específicos para la página "Sobre Nosotros".
+Ubicado en /Raffles/scss/sobrenosotros.scss
+Este archivo será compilado a /Raffles/css/sobrenosotros.css
+*/
+
+// Puedes añadir variables de Sass ($) o variables de CSS (--) específicas
+// si las necesitas solo para estilos dentro de esta página.
+// Ejemplo de variable Sass:
+// $team-member-border-color: #ccc; // Definimos una variable local si queremos
+
+/* Estilos para las secciones principales de "Sobre Nosotros" */
+.about-section {
+    margin-bottom: 3rem; // Espacio después de cada sección
+    padding: 2rem 0; // Padding interno arriba y abajo
+    border-bottom: 1px solid #eee; // Línea separadora suave entre secciones
+    &:last-child {
+        border-bottom: none; // Eliminar la línea del último
+        margin-bottom: 0;
+    }
+
+    h2 {
+        color: var(--primary-color); // Título de sección con color primario
+        text-align: center;
+        margin-bottom: 2rem; // Espacio debajo del título de sección
+        font-size: 2rem;
+    }
+
+    p {
+        line-height: 1.8; // Espaciado entre líneas para mejor legibilidad
+        margin-bottom: 1rem; // Espacio entre párrafos
+    }
+}
+
+/* Estilos específicos para la sección de Equipo */
+.about-section.team {
+    .team-members-container {
+        display: flex; // Usar flexbox para mostrar los miembros en fila
+        flex-wrap: wrap; // Permitir que los miembros se envuelvan en filas nuevas en pantallas pequeñas
+        gap: 2rem; // Espacio entre los miembros del equipo
+        justify-content: center; // Centrar los miembros si no llenan la fila
+    }
+
+    .team-member {
+        flex: 0 0 280px; // Flex-grow: 0, flex-shrink: 0, base-size: 280px (ancho base de cada miembro)
+        text-align: center; // Centrar contenido dentro del recuadro del miembro
+        background-color: var(--secondary-color); // Fondo claro para el recuadro
+        padding: var(--spacing-unit); // Padding interno
+        border-radius: var(--border-radius); // Bordes redondeados
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra suave
+
+        img {
+            width: 100%; // Imagen ocupa todo el ancho del contenedor del miembro
+            max-width: 150px; // Ancho máximo de la imagen del equipo
+            height: auto; // Altura automática para mantener proporción
+            border-radius: 50%; // Hacer la imagen redonda (si es cuadrada)
+            margin-bottom: var(--spacing-unit); // Espacio debajo de la imagen
+            border: 3px solid var(--primary-color); // Borde con color primario
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem; // Espacio debajo del nombre
+            color: var(--text-color); // Color de texto oscuro
+        }
+
+        p {
+            font-size: 0.9rem; // Texto de rol/biografía más pequeño
+            color: #555; // Color de texto ligeramente más claro
+            margin-bottom: 0.5rem; // Espacio entre rol y biografía/frase
+        }
+    }
+}
+
+/* Estilos específicos para la sección de Compromiso (opcional, podrías añadir íconos, etc.) */
+.about-section.commitment {
+    // Puedes añadir estilos especiales aquí para destacar el texto de seguridad
+    font-weight: bold;
+    color: var(--text-color);
+    // background-color: #e9e9e9; // Ejemplo de fondo diferente
+    // padding: 2rem;
+    // border-left: 5px solid var(--primary-color);
+}
+
+/* Media Queries para el equipo (para que se apilen en pantallas pequeñas) */
+@media (max-width: 767px) {
+    .about-section.team {
+        .team-members-container {
+            flex-direction: column; // Apilar miembros en columnas en móviles
+            align-items: center; // Centrar los miembros apilados
+        }
+
+        .team-member {
+            flex-basis: 90%; // Ocupar casi todo el ancho en móviles
+            max-width: 300px; // Ancho máximo para que no se hagan demasiado grandes
+        }
+    }
+}
+
+/* Media Queries para tabletas (si necesitas ajustar el diseño del equipo) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .about-section.team {
+        .team-members-container {
+             gap: 1rem; // Ajustar espacio entre miembros en tabletas
+             justify-content: space-around; // Ajustar justificación
+        }
+        .team-member {
+             flex-basis: calc(50% - 1rem); // Mostrar 2 miembros por fila
+             max-width: none; // Quitar max-width si prefieres que se ajusten al 50%
+        }
+    }
+}

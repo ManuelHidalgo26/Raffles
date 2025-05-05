@@ -1,0 +1,116 @@
+/*
+  Estilos específicos para la página de Contacto.
+  Ubicado en /Raffles/scss/contacto.scss
+  Este archivo será compilado a /Raffles/css/contacto.css
+*/
+
+// Puedes añadir variables de Sass ($) o variables de CSS (--) específicas
+// si las necesitas solo para estilos dentro de esta página.
+
+/* Estilos para la sección principal de contacto */
+.contact-section {
+    padding: 2rem 0; // Espacio arriba y abajo
+    // Añade otros estilos generales para la sección de contacto si los necesitas
+}
+
+/* Contenedor para formulario y detalles */
+.contact-container {
+    display: flex; // Ejemplo: para formulario y detalles uno al lado del otro
+    flex-wrap: wrap; // Permite que se apilen en pantallas pequeñas
+    gap: 2rem; // Espacio entre los dos contenedores internos
+    margin-top: 2rem; // Espacio encima
+}
+
+/* Estilos para el contenedor del formulario */
+.contact-form-container {
+    flex: 1; // Permite que ocupe el espacio disponible (ajustar según necesites)
+    min-width: 300px; // Ancho mínimo antes de apilarse
+}
+
+/* Estilos para el contenedor de detalles */
+.contact-details {
+    flex: 1; // Permite que ocupe el espacio disponible (ajustar según necesites)
+    min-width: 250px; // Ancho mínimo antes de apilarse
+    // Añade estilos como background, padding, etc. si quieres destacar los detalles
+    background-color: var(--secondary-color); // Ejemplo usando variable CSS
+    padding: var(--spacing-unit); // Ejemplo usando variable CSS
+    border-radius: var(--border-radius); // Ejemplo usando variable CSS
+}
+
+
+/* Ejemplo de estilos para el formulario de contacto */
+/* Descomenta y modifica cuando tengas el formulario en el HTML */
+
+.contact-form {
+    margin-top: 1rem; // Espacio encima del formulario si hay un h3 antes
+    padding: 1.5rem;
+    background-color: #fff; // Fondo blanco para el formulario
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 { // Estilo para el título dentro del formulario (si lo pones)
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+
+.contact-form .form-group {
+    margin-bottom: 1rem; // Espacio entre grupos de campo (label + input)
+}
+
+.contact-form label {
+    display: block; // Etiqueta en su propia línea
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; // Campos ocupan todo el ancho disponible
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    &:focus { // Estilo al enfocar el campo
+        outline: none; // Quitar contorno por defecto
+        border-color: var(--primary-color); // Cambiar borde al enfocar
+        box-shadow: 0 0 5px rgba(var(--primary-color), 0.5); // Sombra suave al enfocar (ejemplo básico, con variables CSS es más complejo)
+    }
+}
+
+.contact-form textarea {
+    resize: vertical; // Permitir redimensionar solo verticalmente
+}
+
+.contact-form .btn-submit { // Estilo para el botón de enviar
+    display: block; // Botón ocupa su propia línea
+    width: 100%; // Opcional: botón ocupa todo el ancho
+    background-color: var(--primary-color); // Usa variable CSS global
+    color: var(--light-text-color); // Usa variable CSS global
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        // Para usar darken() aquí necesitas la variable de Sass $primary-color-sass
+        // background-color: darken($primary-color-sass, 10%);
+         background-color: #d48a0e; // Ejemplo de color más oscuro directo si no usas darken
+    }
+}
+
+// Estilos para el mapa incrustado si lo incluyes
+.contact-map iframe {
+    width: 100%; // Mapa ocupa todo el ancho del contenedor
+    height: 300px; // Altura fija para el mapa
+    border-radius: var(--border-radius);
+    margin-top: 1.5rem; // Espacio encima del mapa si va después de los detalles
+}
+
+// Fin del bloque de ejemplo comentado
