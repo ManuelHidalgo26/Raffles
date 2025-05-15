@@ -1,0 +1,108 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 253 60% 15%; /* #1B0D3F - Dark Purple */
+    --foreground: 0 0% 98%; /* Neutral 50 (Light text for dark background) */
+
+    --muted: 253 60% 20%; /* Slightly lighter Dark Purple */
+    --muted-foreground: 253 10% 65%; /* Lighter text for muted */
+
+    --popover: 253 60% 12%; /* Darker Purple for popovers */
+    --popover-foreground: 0 0% 98%; /* Neutral 50 */
+
+    --card: 253 60% 18%; /* Dark Purple for cards */
+    --card-foreground: 0 0% 98%; /* Neutral 50 */
+
+    --border: 253 50% 30%; /* Lighter purple for borders */
+    --input: 253 50% 25%; /* Dark purple for input backgrounds */
+
+    --primary: 39 92% 51%; /* #F39C12 - Orange */
+    --primary-foreground: 253 60% 10%; /* Dark Purple text for orange buttons */
+    --primary-hover: 39 92% 45%; /* Darker Orange for hover */
+
+    --secondary: 253 60% 25%; /* Dark Purple for secondary elements */
+    --secondary-foreground: 39 92% 51%; /* Orange text for secondary elements */
+
+    --accent: 253 60% 22%; /* Dark Purple for accent */
+    --accent-foreground: 39 92% 51%; /* Orange for accent text */
+
+    --destructive: 0 72.2% 50.6%; /* Red 600 (Kept for destructive actions) */
+    --destructive-foreground: 0 0% 98%; /* Neutral 50 */
+    
+    --ring: 39 92% 51%; /* Orange for rings */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 253 60% 15%; /* #1B0D3F - Dark Purple */
+    --foreground: 0 0% 98%; /* Neutral 50 (Light text for dark background) */
+
+    --muted: 253 60% 20%; /* Slightly lighter Dark Purple */
+    --muted-foreground: 253 10% 65%; /* Lighter text for muted */
+
+    --popover: 253 60% 12%; /* Darker Purple for popovers */
+    --popover-foreground: 0 0% 98%; /* Neutral 50 */
+
+    --card: 253 60% 18%; /* Dark Purple for cards */
+    --card-foreground: 0 0% 98%; /* Neutral 50 */
+
+    --border: 253 50% 30%; /* Lighter purple for borders */
+    --input: 253 50% 25%; /* Dark purple for input backgrounds */
+
+    --primary: 39 92% 51%; /* #F39C12 - Orange */
+    --primary-foreground: 253 60% 10%; /* Dark Purple text for orange buttons */
+    --primary-hover: 39 92% 45%; /* Darker Orange for hover */
+
+    --secondary: 253 60% 25%; /* Dark Purple for secondary elements */
+    --secondary-foreground: 39 92% 51%; /* Orange text for secondary elements */
+
+    --accent: 253 60% 22%; /* Dark Purple for accent */
+    --accent-foreground: 39 92% 51%; /* Orange for accent text */
+
+    --destructive: 0 62.8% 30.6%; /* Red 900 (Kept for destructive actions) */
+    --destructive-foreground: 0 0% 98%; /* Neutral 50 */
+
+    --ring: 39 92% 51%; /* Orange for rings */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    @apply text-foreground;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-400;
+}
+
+.hero-bg-gradient {
+  background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+}
+.dark .hero-bg-gradient {
+   background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.8) 100%);
+}
+
+.section-padding {
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+.feature-card {
+  @apply bg-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300;
+}
+
+.cta-gradient {
+  @apply bg-gradient-to-r from-primary to-orange-500 text-primary-foreground;
+}
